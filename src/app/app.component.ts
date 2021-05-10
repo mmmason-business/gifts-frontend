@@ -13,8 +13,12 @@ export class AppComponent implements OnInit {
   }
   @HostListener('window:resize')
   onResize() {
-    this.element.nativeElement.style.height = `${window.innerHeight}px`;
-    this.element.nativeElement.style.width = `${window.innerWidth}px`;
-    window.scrollTo(0, 1);
+    setTimeout(() => {
+      this.element.nativeElement.style.height = `${window.innerHeight}px`;
+      this.element.nativeElement.style.width = `${window.innerWidth}px`;
+      setTimeout(() => {
+        window.scrollTo(0, 1);
+      }, 500);
+    }, 500);
   }
 }
