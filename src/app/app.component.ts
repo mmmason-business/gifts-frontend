@@ -15,5 +15,6 @@ export class AppComponent implements OnInit {
   onResize() {
     this.element.nativeElement.style.height = `${window.innerHeight}px`;
     this.element.nativeElement.style.width = `${window.innerWidth}px`;
+    window.scrollTo(0, 1);
   }
 }
